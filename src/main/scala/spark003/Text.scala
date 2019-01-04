@@ -13,6 +13,7 @@ object Text {
     val sc  = new SparkContext(conf)
     val rdd3 = sc.parallelize(List("12","23","345","4567"),2)
     rdd3.aggregate("")((x,y) => math.max(x.length, y.length).toString, (x,y) => x + y)
+
   }
 
 }
