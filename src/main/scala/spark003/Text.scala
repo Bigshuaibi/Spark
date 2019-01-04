@@ -9,6 +9,7 @@ import org.apache.spark.{SparkConf, SparkContext}
   */
 object Text {
   def main(args: Array[String]): Unit = {
+
     val conf = new SparkConf().setMaster("local").setAppName("Text")
     val sc  = new SparkContext(conf)
     val rdd3 = sc.parallelize(List("12","23","345","4567"),2)
